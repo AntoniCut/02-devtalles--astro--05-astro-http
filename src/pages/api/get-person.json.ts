@@ -12,6 +12,7 @@ import type { APIRoute } from "astro";
  * ----------------------------------------
  * -----  `GET({ params, request })`  -----
  * ----------------------------------------
+ * - Describe el endpoint GET utilizado para obtener una persona.
  */
 export const GET: APIRoute = async ({ params, request }) => {
     
@@ -24,5 +25,5 @@ export const GET: APIRoute = async ({ params, request }) => {
         status: 400,
         headers: { "Content-Type": "application/json" },
     });
-    
+
 };
