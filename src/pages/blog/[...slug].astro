@@ -1,0 +1,35 @@
+---
+/*
+ *  ------------------------------------------------------------------  *
+ *  -----  [...slug].astro  --  /src/pages/blog/[...slug].astro  -----  *
+ *  ------------------------------------------------------------------  *
+ */
+import { type CollectionEntry, getCollection, render } from "astro:content";
+import BlogPost from "@/src/layouts/BlogPost.astro";
+
+/**
+ * -------------------------------------------------
+ * -----  `getStaticPaths()`  -----
+ * -------------------------------------------------
+ * - Genera rutas estáticas para cada post del blog.
+ */
+export const getStaticPaths = async () => {
+    /** - `posts publicados en la colección blog` */
+    const posts = await getCollection("blog");
+
+    return posts.map((post) => ({
+        params: { slug: post.id },
+        props: post,
+    }));
+};
+
+type Props = CollectionEntry<"blog">;
+
+/** - `post actual renderizado en la ruta` */
+const post = Astro.props;
+const { Content } = await render(post);
+---
+
+<BlogPost {...post.data}>
+    <Content />
+</BlogPost>
