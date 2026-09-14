@@ -4,9 +4,11 @@
  *  -----  BaseHead.astro  --  /src/components/BaseHead.astro  -----  *
  *  ----------------------------------------------------------------  *
  */
+
 //  -----  estilos globales incluidos en todas las páginas  -----
 import "@/src/styles/global.css";
 import type { ImageMetadata } from "astro";
+import { ClientRouter } from "astro:transitions";
 import FallbackImage from "@/src/assets/blog-placeholder-1.jpg";
 import { SITE_TITLE } from "@/src/consts";
 import { Font } from "astro:assets";
@@ -56,3 +58,5 @@ const { title, description, image = FallbackImage } = Astro.props;
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
+
+<ClientRouter />

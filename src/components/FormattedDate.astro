@@ -5,14 +5,11 @@
  *  --------------------------------------------------------------------------  *
  */
 interface Props {
-    
     /** - `fecha a formatear` */
     date: Date;
 }
 
-
 const { date } = Astro.props;
-
 ---
 
 <time datetime={date.toISOString()}>
