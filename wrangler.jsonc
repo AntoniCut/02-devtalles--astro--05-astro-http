@@ -1,0 +1,9 @@
+{
+    "name": "antonydev-astro-http",
+    "kv_namespaces": [
+        {
+            "binding": "SESSION",
+            "id": "75e4b3f2ae6346118f62f543fbab6ee3"
+        }
+    ]
+}
