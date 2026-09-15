@@ -34,9 +34,11 @@ jobs:
             - name: Build
               run: pnpm build
 
+            - name: Verify Cloudflare worker target
+              run: node -e "const c=require('./dist/server/wrangler.json'); const e='antonydev-astro-http'; if(c.name!==e){console.error('Wrong worker:',c.name);process.exit(1)}; console.log('Deploying to:',c.name)"
+
             - name: Deploy to Cloudflare Workers
-              uses: cloudflare/wrangler-action@v3
-              with:
-                  apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-                  accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-                  command: deploy
+              run: pnpm exec wrangler deploy
+              env:
+                  CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+                  CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
