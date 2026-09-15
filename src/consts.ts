@@ -19,6 +19,9 @@ export const SITE_META: SiteMeta = {
     description: SITE_DESCRIPTION,
 };
 
+/** - `versión del favicon; sube el número al cambiar el icono para evitar caché del navegador` */
+export const FAVICON_VERSION = "2";
+
 /**
  * --------------------------
  * -----  `withBase()`  -----
