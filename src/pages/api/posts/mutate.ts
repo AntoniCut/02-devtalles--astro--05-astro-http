@@ -4,7 +4,6 @@
     *  -----------------------------------------------------------  *
  */
 
-
 import type { APIRoute } from "astro";
 import { jsonResponse, parseJsonBody } from "@/src/pages/api/posts/_helpers";
 
@@ -19,7 +18,6 @@ export const prerender = false;
  * - Simula la creación de un nuevo post (demo, sin persistencia).
  */
 export const POST: APIRoute = async ({ request }) => {
-    
     const body = await parseJsonBody(request);
 
     if (body instanceof Response) {

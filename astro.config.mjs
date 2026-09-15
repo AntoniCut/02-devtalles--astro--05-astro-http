@@ -9,8 +9,8 @@
 
 // @ts-check
 
+import cloudflare from "@astrojs/cloudflare";
 import mdx from "@astrojs/mdx";
-import node from "@astrojs/node";
 import sitemap from "@astrojs/sitemap";
 import { defineConfig, fontProviders } from "astro/config";
 
@@ -22,9 +22,7 @@ export default defineConfig({
 
     //output: "server",
 
-    adapter: node({
-        mode: "standalone",
-    }),
+    adapter: cloudflare(),
 
     fonts: [
         {
