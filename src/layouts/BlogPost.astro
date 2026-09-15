@@ -12,6 +12,7 @@ import BaseHead from "@/src/components/BaseHead.astro";
 import Footer from "@/src/components/Footer.astro";
 import FormattedDate from "@/src/components/FormattedDate.astro";
 import Header from "@/src/components/Header.astro";
+import { withBase } from "@/src/consts";
 
 
 type Props = CollectionEntry<"blog">["data"];
@@ -62,6 +63,19 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
             .last-updated-on {
                 font-style: italic;
             }
+            .back-link {
+                width: 720px;
+                max-width: calc(100% - 2em);
+                margin: 0 auto;
+                padding: 1em 1em 0;
+            }
+            .back-link a {
+                color: rgb(var(--gray-dark));
+                text-decoration: none;
+            }
+            .back-link a:hover {
+                color: var(--accent);
+            }
         </style>
     </head>
 
@@ -69,6 +83,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
         <Header />
         <main>
             <article>
+                <nav class="back-link" aria-label="Volver al listado del blog">
+                    <a href={withBase("/blog")}>← Volver</a>
+                </nav>
                 <div class="hero-image">
                     {heroImage && (
                         <Image
