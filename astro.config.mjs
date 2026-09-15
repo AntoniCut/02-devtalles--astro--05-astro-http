@@ -23,14 +23,7 @@ import { defineConfig, fontProviders } from "astro/config";
  * Definir la configuración principal de Astro.
 */
 export default defineConfig({
-    
-    //site: "https://example.com",
-    
-    site: "https://devtalles.antonydev.tech",
-    base: "/astro/05-astro-http",
-    trailingSlash: "always",
-    
-    
+    site: "https://example.com",
     integrations: [mdx(), sitemap()],
 
     //output: "server",
