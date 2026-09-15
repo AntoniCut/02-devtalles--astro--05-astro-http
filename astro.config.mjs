@@ -4,8 +4,8 @@
     *  -----------------------------------------------------  *
 */
 
-/// <reference path="./types/types.d.js" />
-/// <reference path="./types/global.d.ts" />
+/// <reference path="./src/interfaces/types.d.js" />
+/// <reference path="./src/interfaces/global.d.ts" />
 
 // @ts-check
 

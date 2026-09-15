@@ -18,8 +18,8 @@
     "include": [
         "src/**/*.js",
         "astro.config.mjs",
-        "types/**/*.d.js",
-        "types/**/*.d.ts"
+        "src/interfaces/**/*.d.js",
+        "src/interfaces/**/*.d.ts"
     ],
     "exclude": ["node_modules", "dist"]
 }

@@ -4,7 +4,7 @@
  *  -------------------------------------------  *
  */
 
-import type { SiteMeta } from "@/types/types";
+import type { SiteMeta } from "@/src/interfaces/types";
 
 /** - `título global del sitio` */
 export const SITE_TITLE = "Astro Blog";

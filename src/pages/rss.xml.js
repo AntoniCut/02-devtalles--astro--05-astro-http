@@ -4,8 +4,8 @@
  *  ---------------------------------------------------  *
  */
 
-/// <reference path="../../types/types.d.js" />
-/// <reference path="../../types/global.d.ts" />
+/// <reference path="../interfaces/types.d.js" />
+/// <reference path="../interfaces/global.d.ts" />
 
 import { getCollection } from "astro:content";
 import rss from "@astrojs/rss";

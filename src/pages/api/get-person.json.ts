@@ -4,9 +4,8 @@
  *  -----------------------------------------------------------------------  *
  */
 
-
 import type { APIRoute } from "astro";
-
+import type { Person } from "@/src/interfaces/types";
 
 /**
  * ----------------------------------------
@@ -15,15 +14,14 @@ import type { APIRoute } from "astro";
  * - Describe el endpoint GET utilizado para obtener una persona.
  */
 export const GET: APIRoute = async ({ params, request }) => {
-    
-    const data = { 
-        name: "John Doe", 
-        age: 30
+    /** - `Obtiene los parámetros de la URL`. */
+    const data: Person = {
+        name: "John Doe",
+        age: 30,
     };
 
     return new Response(JSON.stringify(data), {
         status: 400,
         headers: { "Content-Type": "application/json" },
     });
-
 };

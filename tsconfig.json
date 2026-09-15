@@ -13,6 +13,6 @@
             "@/*": ["./*"]
         }
     },
-    "include": [".astro/types.d.ts", "**/*", "types/**/*.ts"],
+    "include": [".astro/types.d.ts", "**/*", "src/interfaces/**/*.ts"],
     "exclude": ["dist", "node_modules"]
 }
