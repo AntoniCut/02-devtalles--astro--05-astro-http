@@ -10,7 +10,8 @@
         "build": "astro build",
         "preview": "astro preview --port 4322 --open",
         "astro": "astro",
-        "format": "prettier --write \"**/*.{js,ts,astro,mjs}\""
+        "format": "prettier --write \"**/*.{js,ts,astro,mjs}\" && node scripts/post-prettier-style.mjs",
+        "format:check": "prettier --check \"**/*.{js,ts,astro,mjs}\""
     },
     "dependencies": {
         "@astrojs/mdx": "^8.0.1",
