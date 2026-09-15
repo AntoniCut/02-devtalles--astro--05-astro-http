@@ -15,9 +15,22 @@ import sitemap from "@astrojs/sitemap";
 import { defineConfig, fontProviders } from "astro/config";
 
 
-//  -----  configuración principal de astro  -----
+
+/**  
+ * ------------------------------
+ * -----  `defineConfig()`  -----
+ * ------------------------------
+ * Definir la configuración principal de Astro.
+*/
 export default defineConfig({
-    site: "https://example.com",
+    
+    //site: "https://example.com",
+    
+    site: "https://devtalles.antonydev.tech",
+    base: "/astro/05-astro-http",
+    trailingSlash: "always",
+    
+    
     integrations: [mdx(), sitemap()],
 
     //output: "server",
