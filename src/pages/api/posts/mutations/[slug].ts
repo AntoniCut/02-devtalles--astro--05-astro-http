@@ -13,8 +13,10 @@ import {
     parseJsonBody,
 } from "@/src/pages/api/posts/_helpers";
 
+
 /** - `modo ssr: las mutaciones se ejecutan en el servidor en cada request` */
 export const prerender = false;
+
 
 /**
  * -----------------------------------------
@@ -41,6 +43,7 @@ export const PUT: APIRoute = async ({ params, request }) => {
         ...body,
     });
 };
+
 
 /**
  * ------------------------------------------
