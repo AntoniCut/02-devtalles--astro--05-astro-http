@@ -1,12 +1,13 @@
 /*
- *  -----------------------------------------------------------  *
- *  -----  [slug].ts  --  /src/pages/api/posts/[slug].ts  -----  *
- *  -----------------------------------------------------------  *
+    *  -----------------------------------------------------------  *
+    *  -----  [slug].ts  --  /src/pages/api/posts/[slug].ts  -----  *
+    *  -----------------------------------------------------------  *
  */
 
 import type { APIRoute, GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
 import { getPostBySlug, jsonResponse } from "@/src/pages/api/posts/_helpers";
+
 
 //  -----  modo estático: prerender true (por defecto) + getStaticPaths  -----
 

@@ -1,8 +1,9 @@
 ---
+
 /*
- *  --------------------------------------------------------------------------  *
- *  -----  FormattedDate.astro  --  /src/components/FormattedDate.astro  -----  *
- *  --------------------------------------------------------------------------  *
+    *  --------------------------------------------------------------------------  *
+    *  -----  FormattedDate.astro  --  /src/components/FormattedDate.astro  -----  *
+    *  --------------------------------------------------------------------------  *
  */
 interface Props {
     /** - `fecha a formatear` */
@@ -10,6 +11,7 @@ interface Props {
 }
 
 const { date } = Astro.props;
+
 ---
 
 <time datetime={date.toISOString()}>

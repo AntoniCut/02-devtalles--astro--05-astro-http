@@ -1,18 +1,17 @@
 ---
+
 /*
- *  ------------------------------------------------------------------  *
- *  -----  [...slug].astro  --  /src/pages/blog/[...slug].astro  -----  *
- *  ------------------------------------------------------------------  *
+    *  ------------------------------------------------------------------  *
+    *  -----  [...slug].astro  --  /src/pages/blog/[...slug].astro  -----  *
+    *  ------------------------------------------------------------------  *
  */
 
- 
 import { getEntry, render } from "astro:content";
 import BlogPost from "@/src/layouts/BlogPost.astro";
 
 
 /** - `Deshabilita la prerenderización de la página`. */
 export const prerender = false;
-
 
 /** - `slug del post desde la URL` */
 const { slug } = Astro.params;
@@ -29,6 +28,7 @@ if (post === undefined) {
 }
 
 const { Content } = await render(post);
+
 ---
 
 <BlogPost {...post.data}>

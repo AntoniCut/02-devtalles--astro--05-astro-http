@@ -1,11 +1,12 @@
 /*
- *  -----------------------------------------------------------  *
- *  -----  _helpers.ts  --  /src/pages/api/posts/_helpers.ts  -----  *
- *  -----------------------------------------------------------  *
+    *  -----------------------------------------------------------  *
+    *  -----  _helpers.ts  --  /src/pages/api/posts/_helpers.ts  -----  *
+    *  -----------------------------------------------------------  *
  */
 
 import type { CollectionEntry } from "astro:content";
 import { getEntry } from "astro:content";
+
 
 /** - `cabeceras json para respuestas de la api` */
 const JSON_HEADERS = {

@@ -1,7 +1,7 @@
 /*
- *  ---------------------------------------------------  *
- *  -----  rss.xml.js  --  /src/pages/rss.xml.js  -----  *
- *  ---------------------------------------------------  *
+    *  ---------------------------------------------------  *
+    *  -----  rss.xml.js  --  /src/pages/rss.xml.js  -----  *
+    *  ---------------------------------------------------  *
  */
 
 /// <reference path="../interfaces/types.d.js" />
@@ -10,6 +10,7 @@
 import { getCollection } from "astro:content";
 import rss from "@astrojs/rss";
 import { SITE_DESCRIPTION, SITE_TITLE } from "@/src/consts";
+
 
 /**
  * ----------------------------

@@ -2,7 +2,7 @@
     *  -----------------------------------------------------  *
     *  -----  astro.config.mjs  --  /astro.config.mjs  -----  *
     *  -----------------------------------------------------  *
-*/
+ */
 
 /// <reference path="./src/interfaces/types.d.js" />
 /// <reference path="./src/interfaces/global.d.ts" />
@@ -14,18 +14,18 @@ import node from "@astrojs/node";
 import sitemap from "@astrojs/sitemap";
 import { defineConfig, fontProviders } from "astro/config";
 
+
 //  -----  configuración principal de astro  -----
 export default defineConfig({
-    
     site: "https://example.com",
     integrations: [mdx(), sitemap()],
-    
+
     //output: "server",
 
     adapter: node({
         mode: "standalone",
     }),
-    
+
     fonts: [
         {
             provider: fontProviders.local(),

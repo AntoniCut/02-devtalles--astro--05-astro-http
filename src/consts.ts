@@ -1,10 +1,11 @@
 /*
- *  -------------------------------------------  *
- *  -----  consts.ts  --  /src/consts.ts  -----  *
- *  -------------------------------------------  *
+    *  -------------------------------------------  *
+    *  -----  consts.ts  --  /src/consts.ts  -----  *
+    *  -------------------------------------------  *
  */
 
 import type { SiteMeta } from "@/src/interfaces/types";
+
 
 /** - `título global del sitio` */
 export const SITE_TITLE = "Astro Blog";

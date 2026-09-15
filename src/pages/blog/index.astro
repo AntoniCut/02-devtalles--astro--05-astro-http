@@ -1,8 +1,9 @@
 ---
+
 /*
- *  ----------------------------------------------------------  *
- *  -----  index.astro  --  /src/pages/blog/index.astro  -----  *
- *  ----------------------------------------------------------  *
+    *  ----------------------------------------------------------  *
+    *  -----  index.astro  --  /src/pages/blog/index.astro  -----  *
+    *  ----------------------------------------------------------  *
  */
 
 export const prerender = false;
@@ -15,10 +16,12 @@ import FormattedDate from "@/src/components/FormattedDate.astro";
 import Header from "@/src/components/Header.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "@/src/consts";
 
+
 /** - `posts del blog ordenados por fecha descendente` */
 const posts = (await getCollection("blog")).sort(
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
+
 ---
 
 <!doctype html>

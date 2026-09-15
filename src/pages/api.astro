@@ -1,8 +1,9 @@
 ---
+
 /*
- *  ---------------------------------------------------  *
- *  -----  api.astro  --  /src/pages/api.astro  -----  *
- *  ---------------------------------------------------  *
+    *  ---------------------------------------------------  *
+    *  -----  api.astro  --  /src/pages/api.astro  -----  *
+    *  ---------------------------------------------------  *
  */
 
 import BaseHead from "@/src/components/BaseHead.astro";
@@ -11,12 +12,14 @@ import Header from "@/src/components/Header.astro";
 import { API_USE_CASES } from "@/src/data/api-endpoints";
 import { SITE_TITLE } from "@/src/consts";
 
+
 /** - `título de la página de documentación api` */
 const pageTitle = `API — ${SITE_TITLE}`;
 
 /** - `descripción de la página de documentación api` */
 const pageDescription =
     "Documentación de los endpoints HTTP del proyecto con todos los casos de uso.";
+
 ---
 
 <!doctype html>

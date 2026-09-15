@@ -1,12 +1,13 @@
 /*
- *  -------------------------------------------------------  *
- *  -----  list.ts  --  /src/pages/api/posts/list.ts  -----  *
- *  -------------------------------------------------------  *
+    *  -------------------------------------------------------  *
+    *  -----  list.ts  --  /src/pages/api/posts/list.ts  -----  *
+    *  -------------------------------------------------------  *
  */
 
 import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
 import { jsonResponse } from "@/src/pages/api/posts/_helpers";
+
 
 //  -----  modo estático: prerender true (por defecto)  -----
 

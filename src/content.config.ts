@@ -1,17 +1,19 @@
 /*
- *  -----------------------------------------------------------  *
- *  -----  content.config.ts  --  /src/content.config.ts  -----  *
- *  -----------------------------------------------------------  *
+    *  -----------------------------------------------------------  *
+    *  -----  content.config.ts  --  /src/content.config.ts  -----  *
+    *  -----------------------------------------------------------  *
  */
 
 import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
 import { z } from "astro/zod";
 
+
 /** - `colección de posts del blog` */
 const blog = defineCollection({
     //  -----  cargar markdown y mdx desde src/content/blog  -----
     loader: glob({ base: "./src/content/blog", pattern: "**/*.{md,mdx}" }),
+
     //  -----  validar frontmatter con zod  -----
     schema: ({ image }) =>
         z.object({
@@ -22,5 +24,6 @@ const blog = defineCollection({
             heroImage: z.optional(image()),
         }),
 });
+
 
 export const collections = { blog };

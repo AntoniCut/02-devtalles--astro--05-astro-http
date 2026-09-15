@@ -1,10 +1,11 @@
 /*
- *  ---------------------------------------------------------------------  *
- *  -----  api-endpoints.ts  --  /src/data/api-endpoints.ts  -----  *
- *  ---------------------------------------------------------------------  *
+    *  ---------------------------------------------------------------------  *
+    *  -----  api-endpoints.ts  --  /src/data/api-endpoints.ts  -----  *
+    *  ---------------------------------------------------------------------  *
  */
 
 import type { ApiUseCase } from "@/src/interfaces/types";
+
 
 /** - `casos de uso de la api del proyecto` */
 export const API_USE_CASES: ApiUseCase[] = [
