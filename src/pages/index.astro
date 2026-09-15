@@ -8,6 +8,10 @@ import BaseHead from "@/src/components/BaseHead.astro";
 import Footer from "@/src/components/Footer.astro";
 import Header from "@/src/components/Header.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "@/src/consts";
+
+/** - `Deshabilita la prerenderización de la página`. */
+export const prerender = false;
+
 ---
 
 <!doctype html>
@@ -16,9 +20,19 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "@/src/consts";
         <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     </head>
     <body>
+        
         <Header />
+        
         <main>
-            <h1>🧑‍🚀 Hello, Astronaut!</h1>
+            
+            <h1>
+                🧑‍🚀 Astro HTTP 🧑‍🚀
+                <br />
+                Hello, Astronaut!
+            </h1>
+
+            <h3> {new Date().getTime()} </h3>
+
             <p>
                 Welcome to the official <a href="https://astro.build/">Astro</a>{" "}
                 blog starter template. This template serves as a lightweight,
@@ -72,6 +86,22 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "@/src/consts";
                 by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
             </p>
         </main>
+
         <Footer />
+
     </body>
+
 </html>
+
+
+
+<style>
+    h3 {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #000;
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+</style>

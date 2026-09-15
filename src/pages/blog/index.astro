@@ -4,6 +4,9 @@
  *  -----  index.astro  --  /src/pages/blog/index.astro  -----  *
  *  ----------------------------------------------------------  *
  */
+
+export const prerender = false;
+
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import BaseHead from "@/src/components/BaseHead.astro";

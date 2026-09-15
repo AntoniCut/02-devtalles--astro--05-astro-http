@@ -9,7 +9,7 @@ import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
 
 /** - `Deshabilita la prerenderización de la página`. */
-export const prerender = false;
+//export const prerender = false;
 
 
 export const GET: APIRoute = async ({ params, request }) => {
