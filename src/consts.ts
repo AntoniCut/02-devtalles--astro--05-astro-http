@@ -18,3 +18,24 @@ export const SITE_META: SiteMeta = {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
 };
+
+/**
+ * --------------------------
+ * -----  `withBase()`  -----
+ * --------------------------
+ * Prefija una ruta con `import.meta.env.BASE_URL` (necesario en subrutas del VPS).
+ * @param path - Ruta interna que empieza por `/` (ej. `/blog`).
+ * @returns Ruta absoluta incluyendo el base del proyecto.
+ */
+export const withBase = (path: string = "/"): string => {
+    /** - `base configurado en Astro, siempre con / final` */
+    const base = import.meta.env.BASE_URL.endsWith("/")
+        ? import.meta.env.BASE_URL
+        : `${import.meta.env.BASE_URL}/`;
+
+    if (path === "/" || path === "") {
+        return base;
+    }
+
+    return `${base}${path.replace(/^\//, "")}`;
+};
