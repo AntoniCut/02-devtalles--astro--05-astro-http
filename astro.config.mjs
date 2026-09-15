@@ -16,6 +16,10 @@ import { defineConfig, fontProviders } from "astro/config";
 
 
 
+const site = process.env.SITE ?? "https://example.com";
+const base = process.env.BASE ?? "/";
+
+
 /**  
  * ------------------------------
  * -----  `defineConfig()`  -----
@@ -23,7 +27,9 @@ import { defineConfig, fontProviders } from "astro/config";
  * Definir la configuración principal de Astro.
 */
 export default defineConfig({
-    site: "https://example.com",
+    
+    site,
+    base,
     integrations: [mdx(), sitemap()],
 
     //output: "server",
