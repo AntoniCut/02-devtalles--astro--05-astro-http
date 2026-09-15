@@ -27,13 +27,21 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 //  -----  props del componente  -----
 const { title, description, image = FallbackImage } = Astro.props;
 
+/** - `url absoluta del favicon` */
+const faviconUrl = new URL("/favicon.png", Astro.url);
+
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/png" href="/favicon.png" />
-<link rel="icon" href="/favicon.ico" sizes="any" />
+<link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href={faviconUrl}
+    transition:persist
+/>
 <link rel="sitemap" href="/sitemap-index.xml" />
 <link
     rel="alternate"
