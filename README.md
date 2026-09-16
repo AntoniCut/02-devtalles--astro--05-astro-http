@@ -1,12 +1,10 @@
-# Astro Starter Kit: Blog
+# 05-astro-http
 
-```sh
-pnpm create astro@latest -- --template blog
-```
+Blog con API HTTP desplegado en **Cloudflare Workers** con **Astro 7**.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+> Variante para el curso de Astro DB + Turso: [05-astro-http-db-turso](../05-astro-http-db-turso/) (Astro 6).
 
-Features:
+## Características
 
 - ✅ Minimal styling (make it your own!)
 - ✅ 100/100 Lighthouse performance
@@ -51,6 +49,9 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm dev`             | Starts local dev server at `localhost:4321`      |
 | `pnpm build`           | Build your production site to `./dist/`          |
 | `pnpm preview`         | Preview your build locally, before deploying     |
+| `pnpm deploy`          | Build + deploy to Cloudflare Workers             |
+| `pnpm format`          | Format code with Prettier                        |
+| `pnpm format:check`    | Check formatting without modifying files         |
 | `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `pnpm astro -- --help` | Get help using the Astro CLI                     |
 
